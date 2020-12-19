@@ -3,9 +3,9 @@
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
-  --accent-color: #2196F3;
-  --primary-background-color: #FFFFFF;
-  --secondary-background-color: #2F303A;
+  --accent-color: #2196f3;
+  --primary-background-color: #ffffff;
+  --secondary-background-color: #2f303a;
 }
 
 body {
@@ -16,9 +16,18 @@ body {
   letter-spacing: 0.03em;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--title-text-color);
   font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 h2 {
@@ -28,7 +37,28 @@ h2 {
 }
 
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/*Main container*/
+
+.container {
+  box-sizing: border-box;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Logo*/
@@ -44,7 +74,7 @@ h2 {
 }
 
 .logo > .header-logo-end {
-  color: #000000
+  color: #000000;
 }
 
 .logo > .footer-logo-end {
@@ -74,23 +104,67 @@ header .link.current {
   color: var(--accent-color);
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav > .site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav > .item + .item {
+  margin-left: 50px;
+}
+
+.main-nav > .auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav > .item + .item {
+  margin-left: 50px;
+}
+
+.main-nav .link {
+  display: inline-block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 /*Hero*/
 
 .hero {
   background-color: var(--secondary-background-color);
+  text-align: center;
 }
 
 .hero > h1 {
+  padding-top: 200px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
   color: var(--primary-background-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
+button {
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
 .hero > button {
+  margin-top: 30px;
+  margin-bottom: 200px;
+  width: 200px;
+  height: 50px;
+
   color: var(--primary-background-color);
   background-color: var(--accent-color);
   font-size: 16px;
@@ -111,9 +185,51 @@ header .link.current {
   line-height: 1.71;
 }
 
+.principles-box {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.principles-box .item + .item {
+  margin-left: 30px;
+}
+
+.principles-box h3 {
+  padding-bottom: 10px;
+}
+
+/*Our work*/
+
+.our-work-block {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 94px;
+}
+
+.our-work-block .item + .item {
+  padding-left: 30px;
+}
+
 /*Team*/
 
+.team {
+  background-color: #f5f4fa;
+}
+
+.team-box {
+  display: flex;
+}
+
+.team h2 {
+  padding-top: 94px;
+  padding-bottom: 50px;
+}
+
 .team h3 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -121,9 +237,24 @@ header .link.current {
 }
 
 .team p {
+  padding-bottom: 30px;
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+
+.team-box > .item {
+  margin-bottom: 94px;
+
+  background-color: var(--primary-background-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team-box > .item + .item {
+  margin-left: 30px;
 }
 
 /*Footer*/
@@ -132,8 +263,21 @@ footer {
   background-color: var(--secondary-background-color);
 }
 
+.footer-block {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-block .list {
+  margin-top: 20px;
+}
+
+.footer-block .item + .item {
+  margin-top: 9px;
+}
+
 footer address {
-  color:var(--primary-background-color);
+  color: var(--primary-background-color);
   font-style: normal;
 }
 
@@ -144,23 +288,42 @@ footer .link {
 
 /*Portfolio*/
 
+.portfolio-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+.portfolio-nav .item + .item {
+  margin-left: 8px;
+}
+
 .portfolio-nav button {
   color: var(--title-text-color);
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   text-align: center;
+
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  padding-right: 22px;
+  border-radius: 4px;
 }
 
 .portfolio-nav button:hover,
 .portfolio-nav button:focus {
   color: var(--primary-background-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio h3 {
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -169,4 +332,38 @@ footer .link {
 .portfolio p {
   font-size: 16px;
   line-height: 1.88;
+}
+
+.portfolio-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 94px;
+}
+
+.portfolio-card > .item {
+  width: 370px;
+  background: var(--primary-background-color);
+  border: 1px solid #eeeeee;
+
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-card h3 {
+  margin-top: 20px;
+  margin-bottom: 4px;
+  margin-left: 24px;
+}
+
+.portfolio-card p {
+  margin-bottom: 20px;
+  margin-left: 24px;
+}
+
+.portfolio-card > .item:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.portfolio-card > .item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
 }
