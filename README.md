@@ -3,4 +3,4 @@
 Домашнее задание №3
 
 Страница Github Pages:
-https://dbeshchuk.github.io/goit-markup-hw-02/
+https://dbeshchuk.github.io/goit-markup-hw-03/
