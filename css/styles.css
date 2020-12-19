@@ -85,6 +85,8 @@ h2 {
 
 header {
   font-style: normal;
+
+  border-bottom: 1px solid #ececec;
 }
 
 header .link {
@@ -138,11 +140,12 @@ header .link.current {
 .hero {
   background-color: var(--secondary-background-color);
   text-align: center;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hero > h1 {
-  padding-top: 200px;
-  margin-top: 0px;
   margin-bottom: 0px;
 
   color: var(--primary-background-color);
@@ -161,7 +164,6 @@ button {
 
 .hero > button {
   margin-top: 30px;
-  margin-bottom: 200px;
   width: 200px;
   height: 50px;
 
@@ -175,6 +177,11 @@ button {
 
 /*Principles*/
 
+.principles {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .principles h3 {
   font-size: 14px;
   line-height: 1.14;
@@ -187,8 +194,6 @@ button {
 
 .principles-box {
   display: flex;
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 .principles-box .item + .item {
@@ -196,15 +201,18 @@ button {
 }
 
 .principles-box h3 {
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /*Our work*/
 
+.our-work {
+  padding-bottom: 94px;
+}
+
 .our-work-block {
   display: flex;
   padding-top: 50px;
-  padding-bottom: 94px;
 }
 
 .our-work-block .item + .item {
@@ -215,6 +223,8 @@ button {
 
 .team {
   background-color: #f5f4fa;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .team-box {
@@ -222,7 +232,6 @@ button {
 }
 
 .team h2 {
-  padding-top: 94px;
   padding-bottom: 50px;
 }
 
@@ -245,8 +254,6 @@ button {
 }
 
 .team-box > .item {
-  margin-bottom: 94px;
-
   background-color: var(--primary-background-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -261,9 +268,6 @@ button {
 
 footer {
   background-color: var(--secondary-background-color);
-}
-
-.footer-block {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -288,10 +292,14 @@ footer .link {
 
 /*Portfolio*/
 
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .portfolio-nav {
   display: flex;
   justify-content: center;
-  margin-top: 94px;
   margin-bottom: 50px;
 }
 
@@ -337,7 +345,6 @@ footer .link {
 .portfolio-card {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 94px;
 }
 
 .portfolio-card > .item {
@@ -349,15 +356,15 @@ footer .link {
   margin-bottom: 30px;
 }
 
-.portfolio-card h3 {
+.card-description {
   margin-top: 20px;
-  margin-bottom: 4px;
-  margin-left: 24px;
-}
-
-.portfolio-card p {
   margin-bottom: 20px;
   margin-left: 24px;
+  margin-right: 24px;
+}
+
+.portfolio-card h3 {
+  margin-bottom: 4px;
 }
 
 .portfolio-card > .item:nth-child(3n) {
