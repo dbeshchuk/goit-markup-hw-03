@@ -1,6 +1,6 @@
-# goit-markup-hw-02
+# goit-markup-hw-03
 
-Домашнее задание №2
+Домашнее задание №3
 
 Страница Github Pages:
-https://dbeshchuk.github.io/goit-markup-hw-02/
+https://dbeshchuk.github.io/goit-markup-hw-03/
